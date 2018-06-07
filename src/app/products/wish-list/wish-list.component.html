@@ -1,0 +1,35 @@
+<div class="custom-overlay"></div>
+<div class="wish-list-container">
+  <h1 class="noty-main-title">Wish List</h1>
+  
+  <div class="content" 
+  fxLayout="row" 
+  fxLayout.xs="column" 
+  fxLayoutAlign="start start" *ngFor="let product of wishLists;let index = index;">
+      <div class="noty-image-container" fxFlex="50" fxLayoutAlign="center">
+          <img class="noty-image" src="assets/images/Asus-Zenfone.jpg" alt="Asus">
+      </div>
+      <div class="noty-product-info" fxFlex="40">
+          <h3 class="title">{{ product.productName }}</h3>
+          <p class="price">${{ product.wishListTotalPrice}}</p>
+
+          <div class="button-row text-center">
+            <button mat-mini-fab color="primary" (click)="increaseItems(product)">
+                <mat-icon>add</mat-icon>
+            </button>
+            <button mat-mini-fab color="accent">
+              {{product.wishListTotalCount}}
+            </button>
+            <button mat-mini-fab color="warn" (click)="decreaseItems(product)">
+                <mat-icon>remove</mat-icon>
+            </button>
+          </div>
+
+          <a class="delete-icon" (click)="deleteItem(index)">
+              <mat-icon>delete_sweep</mat-icon>
+          </a>
+      </div>
+  </div>
+
+
+</div>

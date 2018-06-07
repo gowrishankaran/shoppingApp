@@ -1,0 +1,26 @@
+.button-row {
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+}
+
+.menu-notifications {
+    position: relative;
+    border: 1px solid #ccc;
+    padding-left:7px;
+}
+
+.menu-notification-count {
+    /* position: absolute;
+    color:red; */
+
+    position: relative;
+    top: -21px;
+    color: red;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    font-size: 13px;
+    padding: 2px;
+    left: -15px;
+    background: #fff;
+}

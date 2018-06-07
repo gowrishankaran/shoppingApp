@@ -1,0 +1,30 @@
+
+    <div fxLayout="row wrap" 
+         fxLayout.xs="column"
+         >
+   
+        <div fxFlex="20" class="product-card-block" *ngFor="let product of productLists">
+            <div class="product-info">
+                <a class="wishList-icon" (click)="isWishList(product)">
+                    <mat-icon>favorite_border</mat-icon>
+                </a>
+                <img class="product-image" src="assets/images/Asus-Zenfone.jpg" alt="Asus" />
+                <div fxLayout="row"  
+                     fxLayout.xs="column">
+                     <div class="product-list-info" fxFlex="70">
+                        <h4 class="product-list-title">{{ product.productName }}</h4>
+                        <p class="product-list-price">{{ product.productPrice }}</p>
+                     </div>
+                     <div class="product-list-cart" fxFlex="30">
+                        <mat-icon class="cart-icon">add_shopping_cart</mat-icon>
+                        <p class="add-to-cart">Add to Cart {{product.wishListTotalCount}}</p>
+                     </div>
+                </div>
+            </div>
+        </div>
+                    
+
+        
+    
+      
+    </div>
