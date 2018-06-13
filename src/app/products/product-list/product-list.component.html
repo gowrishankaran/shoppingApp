@@ -15,16 +15,11 @@
                         <h4 class="product-list-title">{{ product.productName }}</h4>
                         <p class="product-list-price">{{ product.productPrice }}</p>
                      </div>
-                     <div class="product-list-cart" fxFlex="30">
+                     <div class="product-list-cart" fxFlex="30" (click)="isMyCartList(product)">
                         <mat-icon class="cart-icon">add_shopping_cart</mat-icon>
-                        <p class="add-to-cart">Add to Cart {{product.wishListTotalCount}}</p>
+                        <p class="add-to-cart">Add to Cart</p>
                      </div>
                 </div>
             </div>
         </div>
-                    
-
-        
-    
-      
     </div>

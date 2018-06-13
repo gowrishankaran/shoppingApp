@@ -31,8 +31,16 @@ export class ProductListComponent implements OnInit {
 
   isWishList (currentProduct) {
     console.log('Wish List');
-    this._productService.setWishList(currentProduct);
+    const item = JSON.parse(JSON.stringify(currentProduct));
+    this._productService.setWishList(item);
     console.log(this._productService.getWishLists());
+  }
+
+  isMyCartList (currentProduct) {
+    console.log('My Cart List');
+    const item = JSON.parse(JSON.stringify(currentProduct));
+    this._productService.setMyCartLists(item);
+    console.log(this._productService.getMyCartLists());
   }
 
 }

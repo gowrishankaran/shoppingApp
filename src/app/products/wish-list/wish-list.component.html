@@ -1,4 +1,4 @@
-<div class="custom-overlay"></div>
+<div class="custom-overlay" (click)="closeWishList()"></div>
 <div class="wish-list-container">
   <h1 class="noty-main-title">Wish List</h1>
   
@@ -11,7 +11,7 @@
       </div>
       <div class="noty-product-info" fxFlex="40">
           <h3 class="title">{{ product.productName }}</h3>
-          <p class="price">${{ product.wishListTotalPrice}}</p>
+          <p class="price">${{ product.productPrice}}</p>
 
           <div class="button-row text-center">
             <button mat-mini-fab color="primary" (click)="increaseItems(product)">

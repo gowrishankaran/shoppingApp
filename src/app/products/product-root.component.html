@@ -45,6 +45,6 @@
   </mat-toolbar>
 
   <app-product-list></app-product-list>
-  <app-wish-list *ngIf="isWishActive"></app-wish-list>
-  <app-my-cart *ngIf="isMyCartActive"></app-my-cart>
+  <app-wish-list *ngIf="isWishActive" (close)="isWishActive = false"></app-wish-list>
+  <app-my-cart *ngIf="isMyCartActive" (close)="isMyCartActive = false"></app-my-cart>
   <!-- <router-outlet></router-outlet> -->

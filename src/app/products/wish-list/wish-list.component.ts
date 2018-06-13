@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ProductsServiceService } from '../products-service.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { ProductsServiceService } from '../products-service.service';
 export class WishListComponent implements OnInit {
 
   private wishLists: any = [];
+  @Output() close = new EventEmitter();
   constructor(private _productService: ProductsServiceService) {
     console.log('Constructor');
   }
@@ -38,6 +39,10 @@ export class WishListComponent implements OnInit {
   deleteItem (index) {
     console.log(index);
     this.wishLists.splice(index, 1);
+  }
+
+  closeWishList() {
+    this.close.emit(null);
   }
 
 }

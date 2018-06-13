@@ -1,0 +1,62 @@
+.custom-overlay {
+    position:fixed;
+    top:64px;
+    width:100%;
+    height:100%;
+    background: rgba(1,1,1,0.4);
+}
+
+.wish-list-container {
+    position:fixed;
+    top:80px;
+    width:500px;
+    height:96%;
+    right:20px;
+    background: rgba(255,255,255,1);
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.noty-main-title {
+    text-align: center;
+}
+
+.noty-image-container {
+    border-right: 1px solid #ccc;
+}
+
+.noty-image {
+    height:150px;
+}
+
+.noty-product-info {
+    position: relative;
+}
+
+.noty-product-info .title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 10px 10px 10px;
+}
+
+.noty-product-info .price {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.delete-icon {
+    position: absolute;
+    top:0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+

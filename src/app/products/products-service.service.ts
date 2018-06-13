@@ -5,6 +5,7 @@ export class ProductsServiceService {
 
   private wishLists: any = [];
   private myCartLists: any = [];
+  wishListStatus: Boolean = false;
 
   constructor() {
   }
@@ -31,4 +32,25 @@ export class ProductsServiceService {
      }
   }
 
+  getMyCartLists() {
+    return this.myCartLists;
+  }
+
+  setMyCartLists(product) {
+    const found = this.isNewWishProduct(product.productId);
+    if (!found || this.myCartLists.length === 0) {
+      this.myCartLists.unshift(product);
+    }
+    console.log(this.getMyCartLists());
+  }
+
+  isNewMyCartListProduct (productId) {
+     if (this.myCartLists.length === 0) {
+        return true;
+     } else {
+        return this.myCartLists.some(function(value) {
+          return value.productId === productId;
+        });
+     }
+  }
 }
